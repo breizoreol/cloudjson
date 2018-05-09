@@ -1,0 +1,15 @@
+{
+  "name": "cloudjson",
+  "version": "1.0.1",
+  "description": "Easily post/get/update json data online, fast and free",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Matthieu Rolland",
+  "license": "ISC",
+  "dependencies": {
+    "crypto": "^1.0.1",
+    "request": "^2.85.0"
+  }
+}
