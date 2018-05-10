@@ -1,6 +1,6 @@
 {
   "name": "cloudjson",
-  "version": "1.0.2",
+  "version": "1.0.3",
   "description": "Easily post/get/update json data online, fast and free",
   "main": "index.js",
   "scripts": {
