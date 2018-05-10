@@ -16,12 +16,17 @@ const cloudJson = require('cloudjson');
 var jsonData = {'foo' : 'bar', 'foo2' : 'bar2'};
 
 // post json online (will return the url from which you'll be able to fetch your data)
-var jsonUrl = await cloudjson.post(jsonData);
+cloudjson.post(jsonData).then(function(result){
+	// result contains the url
+});
 
 // optionnaly, you can specify a password to encrypt the data you push online
 var password = 'myPassword';
-var jsonUrl = await cloudjson.post(jsonData, password);
+cloudjson.post(jsonData, password).then(function(result){
+	// result contains the url
+});
 ```
+From here, examples will be shown using async/await instead of 'then', implying that you are inside an async function, all methods can be used in both manners, since they all return a promise.
 ### Fetch Data
 ```javascript
 // to fetch data you've precedently posted, you need the previously given url
