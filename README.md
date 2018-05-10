@@ -7,8 +7,6 @@ This module is useful if you need to quickly store json data online, for a proof
 
 ## Usage
 
-Cloudjson's methods return promises, ideally, you'll use it inside an async function using await to get the data, using "catch" to get error messages if needed.
-
 ### Post data
 
 ```javascript
