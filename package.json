@@ -4,12 +4,16 @@
   "description": "Easily post/get/update json data online, fast and free",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "mocha"
   },
   "author": "Matthieu Rolland",
   "license": "ISC",
   "dependencies": {
     "crypto": "^1.0.1",
     "request": "^2.85.0"
+  },
+  "devDependencies": {
+    "chai": "^4.1.2",
+    "mocha": "^5.1.1"
   }
 }
