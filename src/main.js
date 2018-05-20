@@ -42,8 +42,7 @@ exports.get = (myJsonUrl, password = false) => {
       }, (err, response, body) => {
         if (err) reject(err);
         if (password && body && typeof body.data != 'undefined') {
-          var result = password ? crypter.decrypt(body.data, password) : body.data;
-          resolve(JSON.parse(result));
+          resolve(JSON.parse(crypter.decrypt(body.data, password)));
         } else {
           resolve(body);
         }

@@ -1,44 +1,40 @@
 const cloudJson = require('../index.js');
+var assert = require('chai').assert;
+var expect = require('chai').expect;
 
 var data = {'foo' : 'bar', 'foo2' : 'bar2'};
+var password = 'randomPassword$`^/_';
 var url;
-var password = 'thepassword';
 
 var getsUrl = async () => {
-  var assert = require('chai').assert;
   myJsonUrl = await cloudJson.post(data);
   url = myJsonUrl.uri;
   assert.typeOf(url, 'string');
 }
 
 var getClearJson = async () => {
-  var expect = require('chai').expect;
   jsonData = await cloudJson.get(url);
   expect(jsonData).to.deep.equal(data);
 }
 
 var updateJson = async () => {
-  var expect = require('chai').expect;
   var updateData = {'foo' : 'bar', 'foo2' : 'bar2', 'foo3' : 'bar3'};
   jsonData = await cloudJson.update(updateData, url);
   expect(jsonData).to.deep.equal(updateData);
 }
 
 var postCrypted = async () => {
-  var assert = require('chai').assert;
   myJsonUrl = await cloudJson.post(data, password);
   url = myJsonUrl.uri;
   assert.typeOf(url, 'string');
 }
 
 var getCrypted = async () => {
-  var expect = require('chai').expect;
   jsonData = await cloudJson.get(url, password);
   expect(jsonData).to.deep.equal(data);
 }
 
 var updateCrypted = async () => {
-  var expect = require('chai').expect;
   var updateData = {'foo' : 'bar', 'foo2' : 'bar2', 'foo3' : 'bar3'};
   jsonData = await cloudJson.update(updateData, url, password);
   decryptedJsonData = await cloudJson.get(url, password);
