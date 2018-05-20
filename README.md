@@ -1,6 +1,6 @@
 # CLOUDJSON
 
-[![Build Status](https://travis-ci.org/breizoreol/cloudjson.svg?branch=master)](https://travis-ci.org/breizoreol/cloudjson)
+[![Build Status](https://travis-ci.org/breizoreol/cloudjson.svg?branch=master)](https://travis-ci.org/breizoreol/cloudjson) ![npm](https://img.shields.io/npm/dt/cloudjson.svg)
 
 cloudjson is a simple module that allows you to programmatically post/get/update json data online, using the api of a free service called [MyJson](http://myjson.com/).
 
